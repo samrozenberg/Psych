@@ -6,4 +6,10 @@
     <%= f.input :study_level %>
     <%= f.submit %>
   <% end %>
+
+  <% @patients.each do |patient| %>
+    <%= patient.first_name %>
+    <%= patient.last_name %>
+  <% end %>
+
 </div>

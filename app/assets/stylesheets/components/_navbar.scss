@@ -9,3 +9,11 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.user-pic {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}

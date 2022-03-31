@@ -49,4 +49,8 @@
   border-bottom: 3px solid transparent;
   padding: 0;
   margin-right: 28px;
+  color: white;
+  &:hover {
+    color: rgb(200, 200, 220);
+  }
 }

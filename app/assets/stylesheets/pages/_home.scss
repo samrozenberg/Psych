@@ -32,4 +32,13 @@
 
 .features {
   display: flex;
+  justify-content: space-between;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 9em;
+  color: white;
+  font-size: 14px;
+  h3 {
+    font-size: 20px;
+  }
 }

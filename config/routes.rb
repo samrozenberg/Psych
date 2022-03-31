@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :patients do
     resources :evaluations, only: [:create, :update]
   end
+  resources :norms, only: [:index]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/dashboard", to: "pages#dashboard"
 end

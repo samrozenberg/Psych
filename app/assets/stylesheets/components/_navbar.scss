@@ -1,6 +1,5 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +8,49 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+#navbar-title {
+  color: white;
+  font-family: monospace;
+}
+
+.user-pic {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profiler-results {
+  display: none;
+}
+
+.pages-home #nav-link-home {
+    border-bottom: 3px solid red ;
+}
+
+.patients-index #nav-link-patients {
+    border-bottom: 3px solid red ;
+}
+
+.norms-index #nav-link-norms {
+    border-bottom: 3px solid red ;
+}
+
+.align-navbar-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-expand-sm .navbar-nav .nav-link {
+  border-bottom: 3px solid transparent;
+  padding: 0;
+  margin-right: 28px;
+  color: white;
+  &:hover {
+    color: white;
+  }
 }

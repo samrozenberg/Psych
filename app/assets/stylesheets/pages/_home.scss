@@ -1,1 +1,65 @@
 // Specific CSS for your home-page
+
+.pages-home {
+  background: url("background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.homepage-catcher {
+  text-align: center;
+}
+.homepage-title {
+  margin: 3.5em 0 0.2em 0;
+  color: white;
+  font-size: 2.65em;
+  padding: 0;
+}
+
+.catcher-sentence {
+  margin: 0 0 1em 0;
+  padding: 0;
+  font-weight: 500;
+  color: #bBD3F9;
+  font-size: 1.5em;
+}
+
+.fake-search-bar {
+  width: 40%;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 9em;
+  color: white;
+  font-size: 14px;
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.feature1 {
+  padding-right: 3%;
+  width: 32%;
+}
+
+.feature2 {
+  padding: 0 4.5%;
+  width: 36%;
+  border-left: 1px solid #6D97C9;
+  border-right: 1px solid #6D97C9;
+}
+
+.feature3 {
+  padding-left: 3%;
+  width: 32%;
+}

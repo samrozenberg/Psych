@@ -1,1 +1,16 @@
-<p>Hello</p>
+<div class="container">
+  <div class="patient-infos">
+    <h1><%= @patient.first_name %> <%= @patient.last_name %></h1>
+    <h5><%= @patient.date_of_birth %></h5>
+    <h5><%= @patient.age %> years old</h5>
+  </div>
+
+  <div class="patient-content-wrapper d-flex justify-content-between">
+    <div class="patient-reports">
+      <p>Find here all the patient's reports.</p>
+    </div>
+    <div class="patient-evaluations">
+      <p>Find here all the patient's tests evaluations.</p>
+    </div>
+  </div>
+</div>

@@ -4,5 +4,5 @@ class Patient < ApplicationRecord
   has_many :evaluations
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :age, presence: true
+  validates :date_of_birth, presence: true
 end

@@ -9,6 +9,7 @@ class PatientsController < ApplicationController
 
   def create
     @patient = Patient.new(patient_params)
+    @patient.age = ((Time.zone.now - @patient.date_of_birth.to_time) / 1.year.seconds).floor
     @patient.save
     DoctorPatient.create(doctor: current_doctor, patient: @patient)
     redirect_to patients_path
@@ -21,7 +22,7 @@ class PatientsController < ApplicationController
   private
 
   def patient_params
-    params.require(:patient).permit(:first_name, :last_name, :age, :study_level)
+    params.require(:patient).permit(:first_name, :last_name, :date_of_birth, :study_level)
   end
 
 end

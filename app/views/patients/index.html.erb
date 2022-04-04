@@ -17,7 +17,11 @@
       <tr>
         <td><%= patient.first_name  %></td>
         <td><%= patient.last_name %></td>
-        <td>/</td>
+        <% if patient.date_of_birth %>
+          <td><%= patient.date_of_birth.strftime("%e %^b %Y") %></td>
+        <% else %>
+          <td>/</td>
+        <% end %>
         <td><%= patient.age %></td>
         <td>
           <%= link_to patient_path(patient), target: :_blank do %>
@@ -48,7 +52,7 @@
               <%= simple_form_for(@patient) do |f| %>
                 <%= f.input :first_name %>
                 <%= f.input :last_name %>
-                <%= f.input :age %>
+                <%= f.input :date_of_birth, as: :date, html5: true %>
                 <%= f.input :study_level %>
                 <%= f.submit %>
               <% end %>

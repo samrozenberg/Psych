@@ -4,15 +4,31 @@
     Create a new patient
   </button>
 
+  <table class="table index-table table-striped ">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Date Of Birth</th>
+      <th>Age</th>
+      <th></th>
+    </tr>
 
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.first_name  %></td>
+        <td><%= patient.last_name %></td>
+        <td>/</td>
+        <td><%= patient.age %></td>
+        <td>
+          <%= link_to patient_path(patient), target: :_blank do %>
+            ➡️
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
 
-  <% @patients.each do |patient| %>
-    <%= patient.first_name %>
-    <%= patient.last_name %>
-  <% end %>
 </div>
-
-
 
 <div class="modal fade" id="createPatientModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

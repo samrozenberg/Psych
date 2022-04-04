@@ -14,6 +14,10 @@ class PatientsController < ApplicationController
     redirect_to patients_path
   end
 
+  def show
+    @patient = Patient.find(params[:id])
+  end
+
   private
 
   def patient_params

@@ -1,0 +1,41 @@
+.patients-show {
+  background: url("background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.patient-infos {
+  text-align: center;
+  color: white;
+}
+
+.patient-reports {
+  width: 30%;
+  border: 1px solid grey;
+  background-color: white;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+.patient-new-evaluation {
+  width: 70%;
+  border: 1px solid grey;
+  background-color: white;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+.patient-evaluations {
+  border: 1px solid grey;
+  background-color: white;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}

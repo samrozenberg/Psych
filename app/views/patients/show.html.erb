@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="patient-infos">
+    <h1><%= @patient.first_name %> <%= @patient.last_name %></h1>
+    <h5><%= @patient.date_of_birth.strftime("%e %^B %Y") %></h5>
+    <h5><%= @patient.age %> years old</h5>
+  </div>
+
+  <div class="patient-content-wrapper d-flex justify-content-between">
+    <div class="patient-reports">
+      <p>Find here all the patient's reports.</p>
+    </div>
+    <div class="patient-new-evaluation">
+      <h3>Create a new Evaluation</h3>
+      <%= simple_form_for [@patient, @evaluation] do |f| %>
+        <%= f.hidden_field :doctor_id, :value => @doctor.id %>
+        <%= f.hidden_field :patient_id, :value => @patient.id %>
+        <%= f.input :norm_id, collection: @norms %>
+        <%= f.input :score %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+  <div class="patient-evaluations">
+    <h3>All Evaluations</h3>
+    <table class="table index-table table-striped ">
+      <tr>
+        <th>Date</th>
+        <th>Test Name</th>
+        <th>Similar population' mean</th>
+        <th>Patient Score</th>
+        <th>Result</th>
+      </tr>
+
+      <% @evaluations.each do |evaluation| %>
+        <tr>
+          <td><%= evaluation.created_at.strftime("%e %^b %Y") %></td>
+          <td><%= evaluation.norm.name  %></td>
+          <td><%= Record.where(norm: evaluation.norm, age: @patient.age, study_level: @patient.study_level)[0].mean %></td>
+          <td><%= evaluation.score %></td>
+          <td><%= evaluation.result.outcome %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

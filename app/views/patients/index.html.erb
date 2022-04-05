@@ -1,18 +1,38 @@
 <div class="container mt-3">
 
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPatientModal">
-    Create a new patient
+    Add a new Patient
   </button>
 
+  <table class="table index-table table-striped ">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Date Of Birth</th>
+      <th>Age</th>
+      <th></th>
+    </tr>
 
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.first_name  %></td>
+        <td><%= patient.last_name %></td>
+        <% if patient.date_of_birth %>
+          <td><%= patient.date_of_birth.strftime("%e %^b %Y") %></td>
+        <% else %>
+          <td>/</td>
+        <% end %>
+        <td><%= patient.age %></td>
+        <td>
+          <%= link_to patient_path(patient), target: :_blank do %>
+            ➡️
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
 
-  <% @patients.each do |patient| %>
-    <%= patient.first_name %>
-    <%= patient.last_name %>
-  <% end %>
 </div>
-
-
 
 <div class="modal fade" id="createPatientModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -32,7 +52,7 @@
               <%= simple_form_for(@patient) do |f| %>
                 <%= f.input :first_name %>
                 <%= f.input :last_name %>
-                <%= f.input :age %>
+                <%= f.input :date_of_birth, as: :date, html5: true %>
                 <%= f.input :study_level %>
                 <%= f.submit %>
               <% end %>

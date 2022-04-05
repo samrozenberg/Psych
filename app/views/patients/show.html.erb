@@ -9,8 +9,7 @@
     <div class="patient-reports">
       <p>Find here all the patient's reports.</p>
     </div>
-    <div class="patient-evaluations">
-      <p>Find here all the patient's tests evaluations.</p>
+    <div class="patient-new-evaluation">
       <h3>Create a new Evaluation</h3>
       <%= simple_form_for [@patient, @evaluation] do |f| %>
         <%= f.input :doctor %>
@@ -20,5 +19,8 @@
         <%= f.submit %>
       <% end %>
     </div>
+  </div>
+  <div class="patient-evaluations">
+    <p>Find here all the patient's tests evaluations.</p>
   </div>
 </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_04_161700) do
+ActiveRecord::Schema.define(version: 2022_04_05_005906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,8 +70,8 @@ ActiveRecord::Schema.define(version: 2022_04_04_161700) do
 
   create_table "records", force: :cascade do |t|
     t.bigint "norm_id", null: false
-    t.integer "mean"
-    t.integer "standard_deviation"
+    t.float "mean"
+    t.float "standard_deviation"
     t.integer "age"
     t.string "study_level"
     t.datetime "created_at", precision: 6, null: false

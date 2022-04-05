@@ -1,7 +1,7 @@
 <div class="container">
   <div class="patient-infos">
     <h1><%= @patient.first_name %> <%= @patient.last_name %></h1>
-    <h5><%= @patient.date_of_birth %></h5>
+    <h5><%= @patient.date_of_birth.strftime("%e %^B %Y") %></h5>
     <h5><%= @patient.age %> years old</h5>
   </div>
 
@@ -11,6 +11,14 @@
     </div>
     <div class="patient-evaluations">
       <p>Find here all the patient's tests evaluations.</p>
+      <h3>Create a new Evaluation</h3>
+      <%= simple_form_for [@patient, @evaluation] do |f| %>
+        <%= f.input :doctor %>
+        <%= f.input :patient %>
+        <%= f.input :norm %>
+        <%= f.input :score %>
+        <%= f.submit %>
+      <% end %>
     </div>
   </div>
 </div>

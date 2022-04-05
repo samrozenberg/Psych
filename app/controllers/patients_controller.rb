@@ -16,7 +16,12 @@ class PatientsController < ApplicationController
   end
 
   def show
+    @doctor = current_doctor
     @patient = Patient.find(params[:id])
+    @norms = []
+    Norm.all.each do |norm|
+      @norms << norm.name
+    end
     @evaluation = Evaluation.new
   end
 

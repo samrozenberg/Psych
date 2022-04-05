@@ -12,15 +12,41 @@
     <div class="patient-new-evaluation">
       <h3>Create a new Evaluation</h3>
       <%= simple_form_for [@patient, @evaluation] do |f| %>
-        <%= f.input :doctor %>
-        <%= f.input :patient %>
-        <%= f.input :norm %>
+        <%= f.hidden_field :doctor_id, :value => @doctor.id %>
+        <%= f.hidden_field :patient_id, :value => @patient.id %>
+        <%= f.input :norm_id, collection: @norms %>
         <%= f.input :score %>
         <%= f.submit %>
       <% end %>
     </div>
   </div>
   <div class="patient-evaluations">
-    <p>Find here all the patient's tests evaluations.</p>
+    <h3>All Evaluations</h3>
+    <table class="table index-table table-striped ">
+      <tr>
+        <th>Test Name</th>
+        <th>Mean</th>
+        <th>Score</th>
+        <th>Result</th>
+      </tr>
+
+      <% @patients.each do |patient| %>
+        <tr>
+          <td><%= patient.first_name  %></td>
+          <td><%= patient.last_name %></td>
+          <% if patient.date_of_birth %>
+            <td><%= patient.date_of_birth.strftime("%e %^b %Y") %></td>
+          <% else %>
+            <td>/</td>
+          <% end %>
+          <td><%= patient.age %></td>
+          <td>
+            <%= link_to patient_path(patient), target: :_blank do %>
+              ➡️
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
   </div>
 </div>

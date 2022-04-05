@@ -5,12 +5,13 @@ class PatientsController < ApplicationController
       @patients << doctor_patient.patient
     end
     @patient = Patient.new
+    @study_levels = ["Niveau ≤ au certificat d'études primaires.", "Niveau ≤ au diplôme d'études secondaires et ≥ au certificat d'études primaires.", "Humanités complètes.", "Humanités + 1 ou 2 ans.", "Humanités + 3 ans ou plus." ]
   end
 
   def create
     @patient = Patient.new(patient_params)
     @patient.age = ((Time.zone.now - @patient.date_of_birth.to_time) / 1.year.seconds).floor
-    @patient.save
+    @patient.save!
     DoctorPatient.create(doctor: current_doctor, patient: @patient)
     redirect_to patients_path
   end

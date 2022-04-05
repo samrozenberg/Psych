@@ -22,7 +22,7 @@
   </div>
   <div class="patient-evaluations">
     <h3>All Evaluations</h3>
-    <table class="table index-table table-striped ">
+    <table class="table evaluations-table table-striped ">
       <tr>
         <th>Date</th>
         <th>Test Name</th>
@@ -37,7 +37,7 @@
           <td><%= evaluation.norm.name  %></td>
           <td><%= Record.where(norm: evaluation.norm, age: @patient.age, study_level: @patient.study_level)[0].mean %></td>
           <td><%= evaluation.score %></td>
-          <td><%= evaluation.result.outcome %></td>
+          <td><strong><%= evaluation.result.outcome %></strong></td>
         </tr>
       <% end %>
     </table>

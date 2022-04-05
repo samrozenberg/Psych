@@ -23,6 +23,7 @@ class PatientsController < ApplicationController
       @norms << norm.name
     end
     @evaluation = Evaluation.new
+    @evaluations = Evaluation.where(patient: @patient)
   end
 
   private

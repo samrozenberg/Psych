@@ -24,27 +24,20 @@
     <h3>All Evaluations</h3>
     <table class="table index-table table-striped ">
       <tr>
+        <th>Date</th>
         <th>Test Name</th>
-        <th>Mean</th>
-        <th>Score</th>
+        <th>Similar population' mean</th>
+        <th>Patient Score</th>
         <th>Result</th>
       </tr>
 
-      <% @patients.each do |patient| %>
+      <% @evaluations.each do |evaluation| %>
         <tr>
-          <td><%= patient.first_name  %></td>
-          <td><%= patient.last_name %></td>
-          <% if patient.date_of_birth %>
-            <td><%= patient.date_of_birth.strftime("%e %^b %Y") %></td>
-          <% else %>
-            <td>/</td>
-          <% end %>
-          <td><%= patient.age %></td>
-          <td>
-            <%= link_to patient_path(patient), target: :_blank do %>
-              ➡️
-            <% end %>
-          </td>
+          <td><%= evaluation.created_at.strftime("%e %^b %Y") %></td>
+          <td><%= evaluation.norm.name  %></td>
+          <td><%= Record.where(norm: evaluation.norm, age: @patient.age, study_level: @patient.study_level)[0].mean %></td>
+          <td><%= evaluation.score %></td>
+          <td><%= evaluation.result.outcome %></td>
         </tr>
       <% end %>
     </table>

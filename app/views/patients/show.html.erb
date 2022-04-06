@@ -16,7 +16,7 @@
         <%= f.hidden_field :patient_id, :value => @patient.id %>
         <%= f.input :norm_id, collection: @norms %>
         <%= f.input :score %>
-        <%= f.submit %>
+        <%= f.submit "Evaluate", class: "evaluation-button" %>
       <% end %>
     </div>
   </div>

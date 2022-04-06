@@ -24,7 +24,7 @@ class PatientsController < ApplicationController
       @norms << norm.name
     end
     @evaluation = Evaluation.new
-    @evaluations = Evaluation.where(patient: @patient)
+    @evaluations = Evaluation.where(patient: @patient).order(:created_at).reverse
   end
 
   private

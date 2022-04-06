@@ -1,4 +1,7 @@
 <div class="container">
+
+  <p><%= link_to '⬅ Back to Patients', patients_path, class: "back-button btn btn-ghost"%></p>
+
   <div class="patient-infos">
     <h1><%= @patient.first_name %> <%= @patient.last_name %></h1>
     <h5><%= @patient.date_of_birth.strftime("%e %^B %Y") %></h5>

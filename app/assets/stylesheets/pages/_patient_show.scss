@@ -38,6 +38,9 @@
   border-radius: 5px;
   text-align: center;
   padding: 10px 0px;
+  h3 {
+    margin-top: 12px;
+  }
 }
 
 .evaluations-table {
@@ -52,4 +55,8 @@
   &:hover {
     background-color: rgba($color: #6049e5, $alpha: 0.8);
   }
+}
+
+.back-button {
+  margin-bottom: -22px;
 }

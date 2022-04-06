@@ -1,6 +1,6 @@
 <div class="container mt-3">
 
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPatientModal">
+  <button type="button" class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#createPatientModal">
     Add a new Patient
   </button>
 
@@ -40,7 +40,7 @@
       <div class="modal-header d-flex justify-content-betwee">
         <img src="https://www.kindpng.com/picc/m/0-4052_clinical-psychology-png-transparent-png.png" class="modal-image" />
         <div class="d-flex align-items-center ms-2">
-          <h5 class="modal-title" id="exampleModalLabel">Neurono</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Neuralysis</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -53,7 +53,7 @@
                 <%= f.input :first_name %>
                 <%= f.input :last_name %>
                 <%= f.input :date_of_birth, as: :date, html5: true %>
-                <%= f.input :study_level %>
+                <%= f.input :study_level, collection: @study_levels %>
                 <%= f.submit %>
               <% end %>
             </div>

@@ -5,10 +5,14 @@ class EvaluationsController < ApplicationController
     @evaluation.norm = Norm.where(name: evaluation_params[:norm_id])[0]
     @evaluation.save!
 
-    @record = Record.where(norm: @evaluation.norm, age: @patient.age, study_level: @patient.study_level)[0]
-    @result_outcome = ((@evaluation.score - @record.mean) / @record.standard_deviation.to_f).round(2)
 
-    Result.create!(evaluation: @evaluation, outcome: @result_outcome)
+    if @evaluation.norm.name == "Empan Arythmétique de la W.A.I.S.-R / Ordre Direct" || @evaluation.norm == "Empan Arythmétique de la W.A.I.S.-R / Ordre Indirect"
+      @record = Record.where(norm: @evaluation.norm, age: @patient.age, study_level: @patient.study_level)[0]
+      @result_outcome = ((@evaluation.score - @record.mean) / @record.standard_deviation.to_f).round(2)
+
+      Result.create!(evaluation: @evaluation, outcome: @result_outcome, kind: "Standard Deviation")
+
+    end
 
     redirect_to patient_path(@patient)
   end

@@ -10,7 +10,7 @@ class EvaluationsController < ApplicationController
       @record = Record.where(norm: @evaluation.norm, age: @patient.age, study_level: @patient.study_level)[0]
       @result_outcome = ((@evaluation.score - @record.mean) / @record.standard_deviation.to_f).round(2)
 
-      Result.create!(evaluation: @evaluation, outcome: @result_outcome, kind: "Standard Deviation")
+      Result.create!(evaluation: @evaluation, outcome: @result_outcome, kind: "Score Z")
 
     end
 

@@ -29,20 +29,27 @@
       <tr>
         <th>Date</th>
         <th>Test Name</th>
-        <th>Population' mean</th>
-        <th>Patient Score</th>
-        <th>Result' Type</th>
-        <th>Result</th>
+        <th>Score Brut</th>
+        <th>Score Z (ét)</th>
+        <th>Percentile</th>
       </tr>
 
       <% @evaluations.each do |evaluation| %>
         <tr>
           <td><%= evaluation.created_at.strftime("%e %^b %Y") %></td>
           <td><%= evaluation.norm.name  %></td>
-          <td><%= Record.where(norm: evaluation.norm, age: @patient.age, study_level: @patient.study_level)[0].mean %></td>
           <td><%= evaluation.score %></td>
-          <td><%= evaluation.result.kind %></td>
-          <td><strong><%= evaluation.result.outcome %></strong></td>
+          <% if evaluation.result.kind == "Score Z" %>
+            <td><strong><%= trim(evaluation.result.outcome) %></strong></td>
+          <% else %>
+            <td>-</td>
+          <% end %>
+          <% if evaluation.result.kind == "Percentile" %>
+            <td><strong><%= trim(evaluation.result.outcome) %></strong></td>
+          <% else %>
+            <td>-</td>
+          <% end %>
+
         </tr>
       <% end %>
     </table>

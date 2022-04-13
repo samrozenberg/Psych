@@ -723,11 +723,188 @@ end
 @record606 = { norm_id: 2, mean: 4.33, standard_deviation: 0.82, age: 79, study_level: "Humanités + 3 ans ou plus." }
 
 
+# Copie de la Figure de Rey
+
+@record607 = { norm_id: 3, age: 4, percentile: 10, value: 1 }
+@record608 = { norm_id: 3, age: 4, percentile: 20, value: 2 }
+@record609 = { norm_id: 3, age: 4, percentile: 25, value: 2 }
+@record610 = { norm_id: 3, age: 4, percentile: 30, value: 2 }
+@record611 = { norm_id: 3, age: 4, percentile: 40, value: 3 }
+@record612 = { norm_id: 3, age: 4, percentile: 50, value: 8 }
+@record613 = { norm_id: 3, age: 4, percentile: 60, value: 8 }
+@record614 = { norm_id: 3, age: 4, percentile: 70, value: 9 }
+@record615 = { norm_id: 3, age: 4, percentile: 75, value: 10 }
+@record616 = { norm_id: 3, age: 4, percentile: 80, value: 11 }
+@record617 = { norm_id: 3, age: 4, percentile: 90, value: 15 }
+@record618 = { norm_id: 3, age: 4, percentile: 100, value: 19 }
+
+@record619 = { norm_id: 3, age: 5, percentile: 10, value: 3 }
+@record620 = { norm_id: 3, age: 5, percentile: 20, value: 8 }
+@record621 = { norm_id: 3, age: 5, percentile: 25, value: 11 }
+@record622 = { norm_id: 3, age: 5, percentile: 30, value: 12 }
+@record623 = { norm_id: 3, age: 5, percentile: 40, value: 18 }
+@record624 = { norm_id: 3, age: 5, percentile: 50, value: 19 }
+@record625 = { norm_id: 3, age: 5, percentile: 60, value: 19 }
+@record626 = { norm_id: 3, age: 5, percentile: 70, value: 21 }
+@record627 = { norm_id: 3, age: 5, percentile: 75, value: 21 }
+@record628 = { norm_id: 3, age: 5, percentile: 80, value: 22 }
+@record629 = { norm_id: 3, age: 5, percentile: 90, value: 26 }
+@record630 = { norm_id: 3, age: 5, percentile: 100, value: 31 }
+
+@record631 = { norm_id: 3, age: 6, percentile: 10, value: 12 }
+@record632 = { norm_id: 3, age: 6, percentile: 20, value: 18 }
+@record633 = { norm_id: 3, age: 6, percentile: 25, value: 19 }
+@record634 = { norm_id: 3, age: 6, percentile: 30, value: 20 }
+@record635 = { norm_id: 3, age: 6, percentile: 40, value: 22 }
+@record636 = { norm_id: 3, age: 6, percentile: 50, value: 23 }
+@record637 = { norm_id: 3, age: 6, percentile: 60, value: 24 }
+@record638 = { norm_id: 3, age: 6, percentile: 70, value: 24 }
+@record639 = { norm_id: 3, age: 6, percentile: 75, value: 25 }
+@record640 = { norm_id: 3, age: 6, percentile: 80, value: 26 }
+@record641 = { norm_id: 3, age: 6, percentile: 90, value: 26 }
+@record642 = { norm_id: 3, age: 6, percentile: 100, value: 27 }
+
+@record643 = { norm_id: 3, age: 7, percentile: 10, value: 14 }
+@record644 = { norm_id: 3, age: 7, percentile: 20, value: 15 }
+@record645 = { norm_id: 3, age: 7, percentile: 25, value: 17 }
+@record646 = { norm_id: 3, age: 7, percentile: 30, value: 20 }
+@record647 = { norm_id: 3, age: 7, percentile: 40, value: 21 }
+@record648 = { norm_id: 3, age: 7, percentile: 50, value: 22 }
+@record649 = { norm_id: 3, age: 7, percentile: 60, value: 23 }
+@record650 = { norm_id: 3, age: 7, percentile: 70, value: 27 }
+@record651 = { norm_id: 3, age: 7, percentile: 75, value: 27 }
+@record652 = { norm_id: 3, age: 7, percentile: 80, value: 28 }
+@record653 = { norm_id: 3, age: 7, percentile: 90, value: 31 }
+@record654 = { norm_id: 3, age: 7, percentile: 100, value: 31 }
+
+@record655 = { norm_id: 3, age: 8, percentile: 10, value: 19 }
+@record656 = { norm_id: 3, age: 8, percentile: 20, value: 23 }
+@record657 = { norm_id: 3, age: 8, percentile: 25, value: 27 }
+@record658 = { norm_id: 3, age: 8, percentile: 30, value: 29 }
+@record659 = { norm_id: 3, age: 8, percentile: 40, value: 29 }
+@record660 = { norm_id: 3, age: 8, percentile: 50, value: 30 }
+@record661 = { norm_id: 3, age: 8, percentile: 60, value: 31 }
+@record662 = { norm_id: 3, age: 8, percentile: 70, value: 32 }
+@record663 = { norm_id: 3, age: 8, percentile: 75, value: 32 }
+@record664 = { norm_id: 3, age: 8, percentile: 80, value: 33 }
+@record665 = { norm_id: 3, age: 8, percentile: 90, value: 33 }
+@record666 = { norm_id: 3, age: 8, percentile: 100, value: 35 }
+
+@record667 = { norm_id: 3, age: 9, percentile: 10, value: 26 }
+@record668 = { norm_id: 3, age: 9, percentile: 20, value: 25 }
+@record669 = { norm_id: 3, age: 9, percentile: 25, value: 28 }
+@record670 = { norm_id: 3, age: 9, percentile: 30, value: 28 }
+@record671 = { norm_id: 3, age: 9, percentile: 40, value: 28 }
+@record672 = { norm_id: 3, age: 9, percentile: 50, value: 30 }
+@record673 = { norm_id: 3, age: 9, percentile: 60, value: 33 }
+@record674 = { norm_id: 3, age: 9, percentile: 70, value: 34 }
+@record675 = { norm_id: 3, age: 9, percentile: 75, value: 34 }
+@record676 = { norm_id: 3, age: 9, percentile: 80, value: 34 }
+@record677 = { norm_id: 3, age: 9, percentile: 90, value: 34 }
+@record678 = { norm_id: 3, age: 9, percentile: 100, value: 36 }
+
+@record679 = { norm_id: 3, age: 10, percentile: 10, value: 25 }
+@record680 = { norm_id: 3, age: 10, percentile: 20, value: 27 }
+@record681 = { norm_id: 3, age: 10, percentile: 25, value: 27 }
+@record682 = { norm_id: 3, age: 10, percentile: 30, value: 27 }
+@record683 = { norm_id: 3, age: 10, percentile: 40, value: 29 }
+@record684 = { norm_id: 3, age: 10, percentile: 50, value: 30 }
+@record685 = { norm_id: 3, age: 10, percentile: 60, value: 32 }
+@record686 = { norm_id: 3, age: 10, percentile: 70, value: 32 }
+@record687 = { norm_id: 3, age: 10, percentile: 75, value: 32 }
+@record688 = { norm_id: 3, age: 10, percentile: 80, value: 33 }
+@record689 = { norm_id: 3, age: 10, percentile: 90, value: 34 }
+@record690 = { norm_id: 3, age: 10, percentile: 100, value: 36 }
+
+@record691 = { norm_id: 3, age: 11, percentile: 10, value: 28 }
+@record692 = { norm_id: 3, age: 11, percentile: 20, value: 30 }
+@record693 = { norm_id: 3, age: 11, percentile: 25, value: 30 }
+@record694 = { norm_id: 3, age: 11, percentile: 30, value: 30 }
+@record695 = { norm_id: 3, age: 11, percentile: 40, value: 32 }
+@record696 = { norm_id: 3, age: 11, percentile: 50, value: 33 }
+@record697 = { norm_id: 3, age: 11, percentile: 60, value: 34 }
+@record698 = { norm_id: 3, age: 11, percentile: 70, value: 35 }
+@record699 = { norm_id: 3, age: 11, percentile: 75, value: 35 }
+@record700 = { norm_id: 3, age: 11, percentile: 80, value: 35 }
+@record701 = { norm_id: 3, age: 11, percentile: 90, value: 36 }
+@record702 = { norm_id: 3, age: 11, percentile: 100, value: 36 }
+
+@record703 = { norm_id: 3, age: 12, percentile: 10, value: 29 }
+@record704 = { norm_id: 3, age: 12, percentile: 20, value: 29 }
+@record705 = { norm_id: 3, age: 12, percentile: 25, value: 30 }
+@record706 = { norm_id: 3, age: 12, percentile: 30, value: 30 }
+@record707 = { norm_id: 3, age: 12, percentile: 40, value: 31 }
+@record708 = { norm_id: 3, age: 12, percentile: 50, value: 32 }
+@record709 = { norm_id: 3, age: 12, percentile: 60, value: 33 }
+@record710 = { norm_id: 3, age: 12, percentile: 70, value: 34 }
+@record711 = { norm_id: 3, age: 12, percentile: 75, value: 34 }
+@record712 = { norm_id: 3, age: 12, percentile: 80, value: 35 }
+@record713 = { norm_id: 3, age: 12, percentile: 90, value: 35 }
+@record714 = { norm_id: 3, age: 12, percentile: 100, value: 36 }
+
+@record715 = { norm_id: 3, age: 13, percentile: 10, value: 24 }
+@record716 = { norm_id: 3, age: 13, percentile: 20, value: 28 }
+@record717 = { norm_id: 3, age: 13, percentile: 25, value: 29 }
+@record718 = { norm_id: 3, age: 13, percentile: 30, value: 29 }
+@record719 = { norm_id: 3, age: 13, percentile: 40, value: 30 }
+@record720 = { norm_id: 3, age: 13, percentile: 50, value: 30 }
+@record721 = { norm_id: 3, age: 13, percentile: 60, value: 32 }
+@record722 = { norm_id: 3, age: 13, percentile: 70, value: 34 }
+@record723 = { norm_id: 3, age: 13, percentile: 75, value: 34 }
+@record724 = { norm_id: 3, age: 13, percentile: 80, value: 34 }
+@record725 = { norm_id: 3, age: 13, percentile: 90, value: 35 }
+@record726 = { norm_id: 3, age: 13, percentile: 100, value: 36 }
+
+@record727 = { norm_id: 3, age: 14, percentile: 10, value: 25 }
+@record728 = { norm_id: 3, age: 14, percentile: 20, value: 28 }
+@record729 = { norm_id: 3, age: 14, percentile: 25, value: 30 }
+@record730 = { norm_id: 3, age: 14, percentile: 30, value: 30 }
+@record731 = { norm_id: 3, age: 14, percentile: 40, value: 31 }
+@record732 = { norm_id: 3, age: 14, percentile: 50, value: 31 }
+@record733 = { norm_id: 3, age: 14, percentile: 60, value: 32 }
+@record734 = { norm_id: 3, age: 14, percentile: 70, value: 34 }
+@record735 = { norm_id: 3, age: 14, percentile: 75, value: 34 }
+@record736 = { norm_id: 3, age: 14, percentile: 80, value: 34 }
+@record737 = { norm_id: 3, age: 14, percentile: 90, value: 35 }
+@record738 = { norm_id: 3, age: 14, percentile: 100, value: 35 }
+
+@record739 = { norm_id: 3, age: 15, percentile: 10, value: 27 }
+@record740 = { norm_id: 3, age: 15, percentile: 20, value: 31 }
+@record741 = { norm_id: 3, age: 15, percentile: 25, value: 31 }
+@record742 = { norm_id: 3, age: 15, percentile: 30, value: 32 }
+@record743 = { norm_id: 3, age: 15, percentile: 40, value: 32 }
+@record744 = { norm_id: 3, age: 15, percentile: 50, value: 32 }
+@record745 = { norm_id: 3, age: 15, percentile: 60, value: 33 }
+@record746 = { norm_id: 3, age: 15, percentile: 70, value: 34 }
+@record747 = { norm_id: 3, age: 15, percentile: 75, value: 34 }
+@record748 = { norm_id: 3, age: 15, percentile: 80, value: 35 }
+@record749 = { norm_id: 3, age: 15, percentile: 90, value: 35 }
+@record750 = { norm_id: 3, age: 15, percentile: 100, value: 36 }
+
+@record751 = { norm_id: 3, age: 16, percentile: 10, value: 29 }
+@record752 = { norm_id: 3, age: 16, percentile: 20, value: 30 }
+@record753 = { norm_id: 3, age: 16, percentile: 25, value: 31 }
+@record754 = { norm_id: 3, age: 16, percentile: 30, value: 31 }
+@record755 = { norm_id: 3, age: 16, percentile: 40, value: 32 }
+@record756 = { norm_id: 3, age: 16, percentile: 50, value: 32 }
+@record757 = { norm_id: 3, age: 16, percentile: 60, value: 33 }
+@record758 = { norm_id: 3, age: 16, percentile: 70, value: 34 }
+@record759 = { norm_id: 3, age: 16, percentile: 75, value: 34 }
+@record760 = { norm_id: 3, age: 16, percentile: 80, value: 34 }
+@record761 = { norm_id: 3, age: 16, percentile: 90, value: 35 }
+@record762 = { norm_id: 3, age: 16, percentile: 100, value: 36 }
+
+
+
+
+
+
+
 
 index = 1
 
 while instance_variable_get("@record#{index}")
-  if Record.where(norm_id: instance_variable_get("@record#{index}")[:norm_id], mean: instance_variable_get("@record#{index}")[:mean], standard_deviation: instance_variable_get("@record#{index}")[:standard_deviation], age: instance_variable_get("@record#{index}")[:age], study_level: instance_variable_get("@record#{index}")[:study_level]).empty?
+  if Record.where(norm_id: instance_variable_get("@record#{index}")[:norm_id], mean: instance_variable_get("@record#{index}")[:mean], standard_deviation: instance_variable_get("@record#{index}")[:standard_deviation], age: instance_variable_get("@record#{index}")[:age], study_level: instance_variable_get("@record#{index}")[:study_level], percentile: instance_variable_get("@record#{index}")[:percentile]).empty?
     record = Record.create!(instance_variable_get("@record#{index}"))
     puts "Created record#{index}"
   end

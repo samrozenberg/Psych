@@ -10,8 +10,8 @@
 puts "Let's gooooooo 🕺"
 
 
-norm1 = { name: "Empan Arythmétique de la W.A.I.S.-R / Ordre Direct", creator: "Van Der Linden & Grégoire", creation_year: 1997 }
-norm2 = { name: "Empan Arythmétique de la W.A.I.S.-R / Ordre Indirect", creator: "Van Der Linden & Grégoire", creation_year: 1997 }
+norm1 = { name: "Digit Span - Empan Direct", creator: "Van Der Linden & Grégoire", creation_year: 1997, function: "Mémoire de travail auditivo-verbale", description: "Boucle phonologique" }
+norm2 = { name: "Digit Span - Empan Inversé", creator: "Van Der Linden & Grégoire", creation_year: 1997, function: "Mémoire de travail auditivo-verbale", description: "Administrateur central" }
 
 
 [norm1, norm2].each do |attributes|

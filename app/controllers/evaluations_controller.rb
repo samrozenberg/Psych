@@ -6,7 +6,7 @@ class EvaluationsController < ApplicationController
     @evaluation.save!
 
 
-    if @evaluation.norm.name == "Empan Arythmétique de la W.A.I.S.-R / Ordre Direct" || @evaluation.norm == "Empan Arythmétique de la W.A.I.S.-R / Ordre Indirect"
+    if @evaluation.norm.name == "Digit Span - Empan Direct" || @evaluation.norm.name == "Digit Span - Empan Inversé"
       @record = Record.where(norm: @evaluation.norm, age: @patient.age, study_level: @patient.study_level)[0]
       @result_outcome = ((@evaluation.score - @record.mean) / @record.standard_deviation.to_f).round(2)
 

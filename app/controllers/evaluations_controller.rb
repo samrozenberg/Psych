@@ -2,7 +2,7 @@ class EvaluationsController < ApplicationController
   def create
     @patient = Patient.find(params[:patient_id])
     @evaluation = Evaluation.new(evaluation_params)
-    @evaluation.norm = Norm.where(name: evaluation_params[:norm_id])[0]
+    # @evaluation.norm = Norm.where(name: evaluation_params[:norm_id])[0]
     @evaluation.save!
 
 

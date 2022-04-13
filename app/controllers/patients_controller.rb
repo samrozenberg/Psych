@@ -21,7 +21,11 @@ class PatientsController < ApplicationController
     @patient = Patient.find(params[:id])
     @norms = []
     Norm.all.each do |norm|
-      @norms << norm.name
+      @norm_array = []
+      # @norm_array << "#{norm.name} (#{norm.description})" ==> norm.details si différentes normes pour même test
+      @norm_array << norm.name
+      @norm_array << norm.id
+      @norms << @norm_array
     end
     @evaluation = Evaluation.new
     @evaluations = Evaluation.where(patient: @patient).order(:created_at).reverse

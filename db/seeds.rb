@@ -12,9 +12,12 @@ puts "Let's gooooooo 🕺"
 
 norm1 = { name: "Digit Span - Empan Direct", creator: "Van Der Linden & Grégoire", creation_year: 1997, function: "Mémoire de travail auditivo-verbale", description: "Boucle phonologique" }
 norm2 = { name: "Digit Span - Empan Inversé", creator: "Van Der Linden & Grégoire", creation_year: 1997, function: "Mémoire de travail auditivo-verbale", description: "Administrateur central" }
+norm3 = { name: "Copie de la Figure de Rey", creator: "André Rey", creation_year: 1940, function: "Capacité visuo-constructive", description: "Perception/Reproduction" }
+norm4 = { name: "Reproduction de Mémoire de la Figure de Rey", creator: "André Rey", creation_year: 1940, function: "Mémoire épisodique visuelle" }
 
 
-[norm1, norm2].each do |attributes|
+
+[norm1, norm2, norm3, norm4].each do |attributes|
   if Norm.where(name: attributes[:name]).empty?
     norm = Norm.create!(attributes)
     puts "Created the norm: #{norm.name}"

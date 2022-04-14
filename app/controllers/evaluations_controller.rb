@@ -12,7 +12,7 @@ class EvaluationsController < ApplicationController
 
       Result.create!(evaluation: @evaluation, outcome: @result_outcome, kind: "Score Z")
 
-    elsif @evaluation.norm.name == "Copie de la Figure de Rey"
+    elsif @evaluation.norm.name == "Copie de la Figure de Rey" || @evaluation.norm.name == "Reproduction de Mémoire de la Figure de Rey"
       if @patient.age > 15
         @records = Record.where(norm: @evaluation.norm, age: 16, value: @evaluation.score)
       else
@@ -84,6 +84,46 @@ class EvaluationsController < ApplicationController
       end
 
       Result.create!(evaluation: @evaluation, outcome: @percentile.round, kind: "Percentile")
+    elsif @evaluation.norm.name == "Trail Making Test - Part A"
+      if @patient.age < 15
+        @record = Record.where(norm: @evaluation.norm, age: @patient.age)[0]
+        @result_outcome = ((@record.mean - @evaluation.score) / @record.standard_deviation.to_f).round(2)
+
+        Result.create!(evaluation: @evaluation, outcome: @result_outcome, kind: "Score Z")
+      else
+        @records = Record.where(norm: @evaluation.norm, age: @patient.age, value: @evaluation.score)
+        if @records.count == 1
+          @percentile = @records[0].percentile
+        else
+          value = @evaluation.score
+          until value == 0 || Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value).exists? do
+            value -= 1
+          end
+          if value == 0
+            @min_percentile = 0
+            @min_score = 0
+          else
+            @min_percentile = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value).last.percentile
+            @min_score = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value).last.value
+          end
+
+          value_bis = @evaluation.score
+          if @min_percentile != 100
+            until Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value_bis).exists? do
+              value_bis += 1
+            end
+            @max_percentile = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value_bis).first.percentile
+            @max_score = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value_bis).first.value
+
+            percentage = (@evaluation.score - @min_score) / (@max_score - @min_score).to_f
+            @percentile = @min_percentile + (percentage * (@max_percentile - @min_percentile))
+          else
+            @max_percentile = 100
+            @percentile = 100
+          end
+        end
+        Result.create!(evaluation: @evaluation, outcome: @percentile.round, kind: "Percentile")
+      end
     end
 
     redirect_to patient_path(@patient)

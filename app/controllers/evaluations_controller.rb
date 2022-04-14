@@ -96,31 +96,30 @@ class EvaluationsController < ApplicationController
           @percentile = @records[0].percentile
         else
           value = @evaluation.score
-          until value == 0 || Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value).exists? do
-            value -= 1
+          until value == 200 || Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value).exists? do
+            value += 1
           end
-          if value == 0
+          if value == 200
             @min_percentile = 0
-            @min_score = 0
+            @min_score = 200
           else
-            @min_percentile = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value).last.percentile
-            @min_score = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value).last.value
+            @min_percentile = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value)[0].percentile
+            @min_score = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value)[0].value
           end
 
           value_bis = @evaluation.score
-          if @min_percentile != 100
+          if @min_percentile != 90
             until Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value_bis).exists? do
-              value_bis += 1
+              value_bis -= 1
             end
-            @max_percentile = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value_bis).first.percentile
-            @max_score = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value_bis).first.value
-
-            percentage = (@evaluation.score - @min_score) / (@max_score - @min_score).to_f
-            @percentile = @min_percentile + (percentage * (@max_percentile - @min_percentile))
+            @max_percentile = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value_bis)[0].percentile
+            @max_score = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value_bis)[0].value
           else
             @max_percentile = 100
-            @percentile = 100
+            @max_score = 0
           end
+          percentage = (@min_score - @evaluation.score) / (@min_score - @max_score).to_f
+          @percentile = @min_percentile + (percentage * (@max_percentile - @min_percentile))
         end
         Result.create!(evaluation: @evaluation, outcome: @percentile.round, kind: "Percentile")
       end

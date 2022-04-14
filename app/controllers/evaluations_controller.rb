@@ -84,7 +84,7 @@ class EvaluationsController < ApplicationController
       end
 
       Result.create!(evaluation: @evaluation, outcome: @percentile.round, kind: "Percentile")
-    elsif @evaluation.norm.name == "Trail Making Test - Part A"
+    elsif @evaluation.norm.name == "Trail Making Test - Part A" || @evaluation.norm.name == "Trail Making Test - Part B"
       if @patient.age < 15
         @record = Record.where(norm: @evaluation.norm, age: @patient.age)[0]
         @result_outcome = ((@record.mean - @evaluation.score) / @record.standard_deviation.to_f).round(2)
@@ -96,12 +96,12 @@ class EvaluationsController < ApplicationController
           @percentile = @records[0].percentile
         else
           value = @evaluation.score
-          until value == 200 || Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value).exists? do
+          until value == 400 || Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value).exists? do
             value += 1
           end
-          if value == 200
+          if value == 400
             @min_percentile = 0
-            @min_score = 200
+            @min_score = 400
           else
             @min_percentile = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value)[0].percentile
             @min_score = Record.where(norm_id: @evaluation.norm, age: @patient.age, value: value)[0].value

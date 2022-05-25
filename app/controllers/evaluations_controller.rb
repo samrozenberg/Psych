@@ -6,6 +6,7 @@ class EvaluationsController < ApplicationController
     @evaluation.save!
 
 
+
     if @evaluation.norm.name == "Digit Span - Empan Direct" || @evaluation.norm.name == "Digit Span - Empan Inversé"
       if @patient.age > 79
         @record = Record.where(norm: @evaluation.norm, age: 79, study_level: @patient.study_level)[0]
@@ -130,6 +131,18 @@ class EvaluationsController < ApplicationController
         end
         Result.create!(evaluation: @evaluation, outcome: @percentile.round, kind: "Percentile")
       end
+    elsif @evaluation.norm.name == "Test de Stroop - Lecture" || @evaluation.norm.name == "Test de Stroop - Dénomination" || @evaluation.norm.name == "Test de Stroop - Interférence"
+      if @patient.age > 79
+        @record = Record.where(norm: @evaluation.norm, age: 79)[0]
+      elsif @patient.age < 16
+        @record = Record.where(norm: @evaluation.norm, age: 16)[0]
+      else
+        @record = Record.where(norm: @evaluation.norm, age: @patient.age)[0]
+      end
+
+      @result_outcome = ((@record.mean - @evaluation.score) / @record.standard_deviation.to_f).round(2)
+
+      Result.create!(evaluation: @evaluation, outcome: @result_outcome, kind: "Score Z")
     end
 
     redirect_to patient_path(@patient)

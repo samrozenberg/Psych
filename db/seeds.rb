@@ -1950,6 +1950,149 @@ end
 @record1647 = { norm_id: 7, mean: 46.91, standard_deviation: 7.37, age: 78 }
 @record1648 = { norm_id: 7, mean: 46.91, standard_deviation: 7.37, age: 79 }
 
+# Test de Stroop -- Dénomination
+
+@record1705 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 16 }
+@record1706 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 17 }
+@record1707 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 18 }
+@record1708 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 19 }
+@record1649 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 20 }
+@record1650 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 21 }
+@record1651 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 22 }
+@record1652 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 23 }
+@record1653 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 24 }
+@record1654 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 25 }
+@record1655 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 26 }
+@record1656 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 27 }
+@record1657 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 28 }
+@record1658 = { norm_id: 8, mean: 62.4, standard_deviation: 13.22, age: 29 }
+
+@record1659 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 30 }
+@record1660 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 31 }
+@record1661 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 32 }
+@record1662 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 33 }
+@record1663 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 34 }
+@record1664 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 35 }
+@record1665 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 36 }
+@record1666 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 37 }
+@record1667 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 38 }
+@record1668 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 39 }
+@record1669 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 40 }
+@record1670 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 41 }
+@record1671 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 42 }
+@record1672 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 43 }
+@record1673 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 44 }
+@record1674 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 45 }
+@record1675 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 46 }
+@record1676 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 47 }
+@record1677 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 48 }
+@record1678 = { norm_id: 8, mean: 65, standard_deviation: 14.23, age: 49 }
+
+@record1679 = { norm_id: 8, mean: 59.58, standard_deviation: 11.15, age: 50 }
+@record1680 = { norm_id: 8, mean: 59.58, standard_deviation: 11.15, age: 51 }
+@record1681 = { norm_id: 8, mean: 59.58, standard_deviation: 11.15, age: 52 }
+@record1682 = { norm_id: 8, mean: 59.58, standard_deviation: 11.15, age: 53 }
+@record1683 = { norm_id: 8, mean: 59.58, standard_deviation: 11.15, age: 54 }
+@record1684 = { norm_id: 8, mean: 59.58, standard_deviation: 11.15, age: 55 }
+@record1685 = { norm_id: 8, mean: 59.58, standard_deviation: 11.15, age: 56 }
+@record1686 = { norm_id: 8, mean: 59.58, standard_deviation: 11.15, age: 57 }
+@record1687 = { norm_id: 8, mean: 59.58, standard_deviation: 11.15, age: 58 }
+@record1688 = { norm_id: 8, mean: 59.58, standard_deviation: 11.15, age: 59 }
+
+@record1689 = { norm_id: 8, mean: 67.06, standard_deviation: 15.06, age: 60 }
+@record1690 = { norm_id: 8, mean: 67.06, standard_deviation: 15.06, age: 61 }
+@record1691 = { norm_id: 8, mean: 67.06, standard_deviation: 15.06, age: 62 }
+@record1692 = { norm_id: 8, mean: 67.06, standard_deviation: 15.06, age: 63 }
+@record1693 = { norm_id: 8, mean: 67.06, standard_deviation: 15.06, age: 64 }
+@record1694 = { norm_id: 8, mean: 67.06, standard_deviation: 15.06, age: 65 }
+@record1695 = { norm_id: 8, mean: 67.06, standard_deviation: 15.06, age: 66 }
+@record1696 = { norm_id: 8, mean: 67.06, standard_deviation: 15.06, age: 67 }
+@record1697 = { norm_id: 8, mean: 67.06, standard_deviation: 15.06, age: 68 }
+@record1698 = { norm_id: 8, mean: 67.06, standard_deviation: 15.06, age: 69 }
+
+@record1699 = { norm_id: 8, mean: 72.05, standard_deviation: 14.91, age: 70 }
+@record1700 = { norm_id: 8, mean: 72.05, standard_deviation: 14.91, age: 71 }
+@record1701 = { norm_id: 8, mean: 72.05, standard_deviation: 14.91, age: 72 }
+@record1702 = { norm_id: 8, mean: 72.05, standard_deviation: 14.91, age: 73 }
+@record1703 = { norm_id: 8, mean: 72.05, standard_deviation: 14.91, age: 74 }
+@record1704 = { norm_id: 8, mean: 72.05, standard_deviation: 14.91, age: 75 }
+@record1709 = { norm_id: 8, mean: 72.05, standard_deviation: 14.91, age: 76 }
+@record1710 = { norm_id: 8, mean: 72.05, standard_deviation: 14.91, age: 77 }
+@record1711 = { norm_id: 8, mean: 72.05, standard_deviation: 14.91, age: 78 }
+@record1712 = { norm_id: 8, mean: 72.05, standard_deviation: 14.91, age: 79 }
+
+# Test de Stroop -- Interférence
+
+@record1766 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 16 }
+@record1767 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 17 }
+@record1768 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 18 }
+@record1769 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 19 }
+@record1770 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 20 }
+@record1771 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 21 }
+@record1772 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 22 }
+@record1773 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 23 }
+@record1713 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 24 }
+@record1714 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 25 }
+@record1715 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 26 }
+@record1716 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 27 }
+@record1717 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 28 }
+@record1718 = { norm_id: 9, mean: 105.06, standard_deviation: 27.41, age: 29 }
+
+@record1719 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 30 }
+@record1720 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 31 }
+@record1721 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 32 }
+@record1722 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 33 }
+@record1723 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 34 }
+@record1724 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 35 }
+@record1725 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 36 }
+@record1726 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 37 }
+@record1727 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 38 }
+@record1728 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 39 }
+@record1729 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 40 }
+@record1730 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 41 }
+@record1731 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 42 }
+@record1732 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 43 }
+@record1733 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 44 }
+@record1734 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 45 }
+@record1735 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 46 }
+@record1736 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 47 }
+@record1737 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 48 }
+@record1738 = { norm_id: 9, mean: 113.14, standard_deviation: 24.2, age: 49 }
+
+@record1739 = { norm_id: 9, mean: 114.14, standard_deviation: 26.06, age: 50 }
+@record1740 = { norm_id: 9, mean: 114.14, standard_deviation: 26.06, age: 51 }
+@record1741 = { norm_id: 9, mean: 114.14, standard_deviation: 26.06, age: 52 }
+@record1742 = { norm_id: 9, mean: 114.14, standard_deviation: 26.06, age: 53 }
+@record1743 = { norm_id: 9, mean: 114.14, standard_deviation: 26.06, age: 54 }
+@record1744 = { norm_id: 9, mean: 114.14, standard_deviation: 26.06, age: 55 }
+@record1745 = { norm_id: 9, mean: 114.14, standard_deviation: 26.06, age: 56 }
+@record1746 = { norm_id: 9, mean: 114.14, standard_deviation: 26.06, age: 57 }
+@record1747 = { norm_id: 9, mean: 114.14, standard_deviation: 26.06, age: 58 }
+@record1748 = { norm_id: 9, mean: 114.14, standard_deviation: 26.06, age: 59 }
+
+@record1749 = { norm_id: 9, mean: 136.16, standard_deviation: 35.84, age: 60 }
+@record1750 = { norm_id: 9, mean: 136.16, standard_deviation: 35.84, age: 61 }
+@record1751 = { norm_id: 9, mean: 136.16, standard_deviation: 35.84, age: 62 }
+@record1752 = { norm_id: 9, mean: 136.16, standard_deviation: 35.84, age: 63 }
+@record1753 = { norm_id: 9, mean: 136.16, standard_deviation: 35.84, age: 64 }
+@record1754 = { norm_id: 9, mean: 136.16, standard_deviation: 35.84, age: 65 }
+@record1755 = { norm_id: 9, mean: 136.16, standard_deviation: 35.84, age: 66 }
+@record1756 = { norm_id: 9, mean: 136.16, standard_deviation: 35.84, age: 67 }
+@record1757 = { norm_id: 9, mean: 136.16, standard_deviation: 35.84, age: 68 }
+@record1758 = { norm_id: 9, mean: 136.16, standard_deviation: 35.84, age: 69 }
+
+@record1759 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 70 }
+@record1760 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 71 }
+@record1761 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 72 }
+@record1762 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 73 }
+@record1763 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 74 }
+@record1764 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 75 }
+@record1765 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 76 }
+@record1774 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 77 }
+@record1775 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 78 }
+@record1776 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 79 }
+
+
 
 
 

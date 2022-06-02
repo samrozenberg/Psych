@@ -19,11 +19,14 @@ norm6 = { name: "Trail Making Test - Part B", creator: "Davies", creation_year: 
 norm7 = { name: "Test de Stroop - Lecture", creator: "Stroop", creation_year: 1935, function: "Fonction fronto-exécutive", description: "Capacité d'inhibition" }
 norm8 = { name: "Test de Stroop - Dénomination", creator: "Stroop", creation_year: 1935, function: "Fonction fronto-exécutive", description: "Capacité d'inhibition" }
 norm9 = { name: "Test de Stroop - Interférence", creator: "Stroop", creation_year: 1935, function: "Fonction fronto-exécutive", description: "Capacité d'inhibition" }
+norm10 = { name: "Grober & Buschke (16 mots) - Rappel Immédiat", creator: "Grober & Buschke", creation_year: 1987, function: "Mémoire épisodique verbale" }
+norm11 = { name: "Grober & Buschke (16 mots) - Rappel Libre 1", creator: "Grober & Buschke", creation_year: 1987, function: "Mémoire épisodique verbale" }
+norm12 = { name: "Grober & Buschke (16 mots) - Rappel Indicé 1", creator: "Grober & Buschke", creation_year: 1987, function: "Mémoire épisodique verbale" }
 
 
 
 
-[norm1, norm2, norm3, norm4, norm5, norm6, norm7, norm8, norm9].each do |attributes|
+[norm1, norm2, norm3, norm4, norm5, norm6, norm7, norm8, norm9, norm10, norm11, norm12].each do |attributes|
   if Norm.where(name: attributes[:name]).empty?
     norm = Norm.create!(attributes)
     puts "Created the norm: #{norm.name}"
@@ -2091,6 +2094,288 @@ end
 @record1774 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 77 }
 @record1775 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 78 }
 @record1776 = { norm_id: 9, mean: 139.14, standard_deviation: 42.41, age: 79 }
+
+# Grober & Buschke (16 mots) -- Rappel Immédiat
+
+@record1777 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 16 }
+@record1778 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 17 }
+@record1779 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 18 }
+@record1780 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 19 }
+@record1781 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 20 }
+@record1782 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 21 }
+@record1783 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 22 }
+@record1784 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 23 }
+@record1785 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 24 }
+@record1786 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 25 }
+@record1787 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 26 }
+@record1788 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 27 }
+@record1789 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 28 }
+@record1790 = { norm_id: 10, mean: 15.8, standard_deviation: 0.5, age: 29 }
+
+@record1791 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 30 }
+@record1792 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 31 }
+@record1793 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 32 }
+@record1794 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 33 }
+@record1795 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 34 }
+@record1796 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 35 }
+@record1797 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 36 }
+@record1798 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 37 }
+@record1799 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 38 }
+@record1800 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 39 }
+@record1801 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 40 }
+@record1802 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 41 }
+@record1803 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 42 }
+@record1804 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 43 }
+@record1805 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 44 }
+@record1806 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 45 }
+@record1807 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 46 }
+@record1808 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 47 }
+@record1809 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 48 }
+@record1810 = { norm_id: 10, mean: 15.5, standard_deviation: 0.9, age: 49 }
+
+@record1811 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 50 }
+@record1812 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 51 }
+@record1813 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 52 }
+@record1814 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 53 }
+@record1815 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 54 }
+@record1816 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 55 }
+@record1817 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 56 }
+@record1818 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 57 }
+@record1819 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 58 }
+@record1820 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 59 }
+@record1821 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 60 }
+@record1822 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 61 }
+@record1823 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 62 }
+@record1824 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 63 }
+@record1825 = { norm_id: 10, mean: 15.7, standard_deviation: 0.7, age: 64 }
+
+@record1826 = { norm_id: 10, mean: 15.3, standard_deviation: 0.8, age: 65 }
+@record1827 = { norm_id: 10, mean: 15.3, standard_deviation: 0.8, age: 66 }
+@record1828 = { norm_id: 10, mean: 15.3, standard_deviation: 0.8, age: 67 }
+@record1829 = { norm_id: 10, mean: 15.3, standard_deviation: 0.8, age: 68 }
+@record1830 = { norm_id: 10, mean: 15.3, standard_deviation: 0.8, age: 69 }
+@record1831 = { norm_id: 10, mean: 15.3, standard_deviation: 0.8, age: 70 }
+@record1832 = { norm_id: 10, mean: 15.3, standard_deviation: 0.8, age: 71 }
+@record1833 = { norm_id: 10, mean: 15.3, standard_deviation: 0.8, age: 72 }
+@record1834 = { norm_id: 10, mean: 15.3, standard_deviation: 0.8, age: 73 }
+@record1835 = { norm_id: 10, mean: 15.3, standard_deviation: 0.8, age: 74 }
+
+@record1836 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 75 }
+@record1837 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 76 }
+@record1838 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 77 }
+@record1839 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 78 }
+@record1840 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 79 }
+@record1841 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 80 }
+@record1842 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 81 }
+@record1843 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 82 }
+@record1844 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 83 }
+@record1845 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 84 }
+@record1846 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 85 }
+@record1847 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 86 }
+@record1848 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 87 }
+@record1849 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 88 }
+@record1850 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 89 }
+@record1851 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 90 }
+@record1852 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 91 }
+@record1853 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 92 }
+@record1854 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 93 }
+@record1855 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 94 }
+@record1856 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 95 }
+@record1857 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 96 }
+@record1858 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 97 }
+@record1859 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 98 }
+@record1860 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 99 }
+@record1861 = { norm_id: 10, mean: 15.2, standard_deviation: 1.4, age: 100 }
+
+# Grober & Buschke (16 mots) -- Rappel Libre 1
+
+@record1867 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 16 }
+@record1868 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 17 }
+@record1869 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 18 }
+@record1870 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 19 }
+@record1871 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 20 }
+@record1872 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 21 }
+@record1873 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 22 }
+@record1874 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 23 }
+@record1875 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 24 }
+@record1876 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 25 }
+@record1877 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 26 }
+@record1878 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 27 }
+@record1879 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 28 }
+@record1880 = { norm_id: 11, mean: 11.3, standard_deviation: 1.9, age: 29 }
+
+@record1881 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 30 }
+@record1882 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 31 }
+@record1883 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 32 }
+@record1884 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 33 }
+@record1885 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 34 }
+@record1886 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 35 }
+@record1887 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 36 }
+@record1888 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 37 }
+@record1889 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 38 }
+@record1890 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 39 }
+@record1891 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 40 }
+@record1892 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 41 }
+@record1893 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 42 }
+@record1894 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 43 }
+@record1895 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 44 }
+@record1896 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 45 }
+@record1897 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 46 }
+@record1898 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 47 }
+@record1899 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 48 }
+@record1900 = { norm_id: 11, mean: 9.6, standard_deviation: 2.6, age: 49 }
+
+@record1901 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 50 }
+@record1902 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 51 }
+@record1903 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 52 }
+@record1904 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 53 }
+@record1905 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 54 }
+@record1906 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 55 }
+@record1907 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 56 }
+@record1908 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 57 }
+@record1909 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 58 }
+@record1910 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 59 }
+@record1911 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 60 }
+@record1912 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 61 }
+@record1913 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 62 }
+@record1914 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 63 }
+@record1915 = { norm_id: 11, mean: 9.4, standard_deviation: 2.6, age: 64 }
+
+@record1916 = { norm_id: 11, mean: 8.4, standard_deviation: 2.5, age: 65 }
+@record1917 = { norm_id: 11, mean: 8.4, standard_deviation: 2.5, age: 66 }
+@record1918 = { norm_id: 11, mean: 8.4, standard_deviation: 2.5, age: 67 }
+@record1919 = { norm_id: 11, mean: 8.4, standard_deviation: 2.5, age: 68 }
+@record1920 = { norm_id: 11, mean: 8.4, standard_deviation: 2.5, age: 69 }
+@record1921 = { norm_id: 11, mean: 8.4, standard_deviation: 2.5, age: 70 }
+@record1922 = { norm_id: 11, mean: 8.4, standard_deviation: 2.5, age: 71 }
+@record1923 = { norm_id: 11, mean: 8.4, standard_deviation: 2.5, age: 72 }
+@record1924 = { norm_id: 11, mean: 8.4, standard_deviation: 2.5, age: 73 }
+@record1925 = { norm_id: 11, mean: 8.4, standard_deviation: 2.5, age: 74 }
+
+@record1926 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 75 }
+@record1927 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 76 }
+@record1928 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 77 }
+@record1929 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 78 }
+@record1930 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 79 }
+@record1931 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 80 }
+@record1932 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 81 }
+@record1933 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 82 }
+@record1934 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 83 }
+@record1935 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 84 }
+@record1936 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 85 }
+@record1937 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 86 }
+@record1938 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 87 }
+@record1939 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 88 }
+@record1940 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 89 }
+@record1941 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 90 }
+@record1942 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 91 }
+@record1943 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 92 }
+@record1944 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 93 }
+@record1945 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 94 }
+@record1862 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 95 }
+@record1863 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 96 }
+@record1864 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 97 }
+@record1865 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 98 }
+@record1866 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 99 }
+@record1946 = { norm_id: 11, mean: 8.7, standard_deviation: 2.1, age: 100 }
+
+# Grober & Buschke (16 mots) -- Rappel Indicé 1
+
+@record1947 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 16 }
+@record1948 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 17 }
+@record1949 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 18 }
+@record1950 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 19 }
+@record1951 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 20 }
+@record1952 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 21 }
+@record1953 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 22 }
+@record1954 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 23 }
+@record1955 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 24 }
+@record1956 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 25 }
+@record1957 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 26 }
+@record1958 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 27 }
+@record1959 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 28 }
+@record1960 = { norm_id: 12, mean: 4.2, standard_deviation: 1.8, age: 29 }
+
+@record1961 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 30 }
+@record1962 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 31 }
+@record1963 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 32 }
+@record1964 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 33 }
+@record1965 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 34 }
+@record1966 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 35 }
+@record1967 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 36 }
+@record1968 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 37 }
+@record1969 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 38 }
+@record1970 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 39 }
+@record1971 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 40 }
+@record1972 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 41 }
+@record1973 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 42 }
+@record1974 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 43 }
+@record1975 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 44 }
+@record1976 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 45 }
+@record1977 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 46 }
+@record1978 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 47 }
+@record1979 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 48 }
+@record1980 = { norm_id: 12, mean: 5.2, standard_deviation: 2.1, age: 49 }
+
+@record1981 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 50 }
+@record1982 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 51 }
+@record1983 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 52 }
+@record1984 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 53 }
+@record1985 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 54 }
+@record1986 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 55 }
+@record1987 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 56 }
+@record1988 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 57 }
+@record1989 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 58 }
+@record1990 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 59 }
+@record1991 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 60 }
+@record1992 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 61 }
+@record1993 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 62 }
+@record1994 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 63 }
+@record1995 = { norm_id: 12, mean: 5.3, standard_deviation: 2, age: 64 }
+
+@record1996 = { norm_id: 12, mean: 5.9, standard_deviation: 2.2, age: 65 }
+@record1997 = { norm_id: 12, mean: 5.9, standard_deviation: 2.2, age: 66 }
+@record1998 = { norm_id: 12, mean: 5.9, standard_deviation: 2.2, age: 67 }
+@record1999 = { norm_id: 12, mean: 5.9, standard_deviation: 2.2, age: 68 }
+@record2000 = { norm_id: 12, mean: 5.9, standard_deviation: 2.2, age: 69 }
+@record2001 = { norm_id: 12, mean: 5.9, standard_deviation: 2.2, age: 70 }
+@record2002 = { norm_id: 12, mean: 5.9, standard_deviation: 2.2, age: 71 }
+@record2003 = { norm_id: 12, mean: 5.9, standard_deviation: 2.2, age: 72 }
+@record2004 = { norm_id: 12, mean: 5.9, standard_deviation: 2.2, age: 73 }
+@record2005 = { norm_id: 12, mean: 5.9, standard_deviation: 2.2, age: 74 }
+
+@record2006 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 75 }
+@record2007 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 76 }
+@record2008 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 77 }
+@record2009 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 78 }
+@record2010 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 79 }
+@record2011 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 80 }
+@record2012 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 81 }
+@record2013 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 82 }
+@record2014 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 83 }
+@record2015 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 84 }
+@record2016 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 85 }
+@record2017 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 86 }
+@record2018 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 87 }
+@record2019 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 88 }
+@record2020 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 89 }
+@record2021 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 90 }
+@record2022 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 91 }
+@record2023 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 92 }
+@record2024 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 93 }
+@record2025 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 94 }
+@record2026 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 95 }
+@record2027 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 96 }
+@record2028 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 97 }
+@record2029 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 98 }
+@record2030 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 99 }
+@record2031 = { norm_id: 12, mean: 6.1, standard_deviation: 1.9, age: 100 }
+
+
+
+
+
+
 
 
 

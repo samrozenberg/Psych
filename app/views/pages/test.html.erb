@@ -1,0 +1,19 @@
+<h3>Create a new Evaluation</h3>
+<%= simple_form_for [@patient, @evaluation] do |f| %>
+  <%= f.hidden_field :doctor_id, :value => @doctor.id %>
+  <%= f.hidden_field :patient_id, :value => @patient.id %>
+  <%= f.input :norm_id, collection: @norms %>
+  <%= f.input :score %>
+  <%= f.submit "Evaluate", class: "evaluation-button" %>
+<% end %>
+
+<%#
+// in patients controllers ::
+    @norms = []
+    Norm.all.each do |norm|
+      @norm_array = []
+      @norm_array << "#{norm.name} (#{norm.description})" ==> norm.details si différentes normes pour même test
+      @norm_array << norm.name
+      @norm_array << norm.id
+      @norms << @norm_array
+    # end %>

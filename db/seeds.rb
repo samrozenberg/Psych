@@ -9,6 +9,21 @@
 
 puts "Let's gooooooo 🕺"
 
+group1 = { name: "Digit Span" }
+group2 = { name: "Figure de Rey" }
+group3 = { name: "Trail Making Test" }
+group4 = { name: "Test de Stroop" }
+group5 = { name: "Grober & Buschke (16 mots)" }
+
+[group1, group2, group3, group4, group5].each do |attributes|
+  if Group.where(name: attributes[:name]).empty?
+    group = Group.create!(attributes)
+    puts "Created the group: #{group.name}"
+  end
+end
+
+
+
 
 norm1 = { name: "Digit Span - Empan Direct", creator: "Van Der Linden & Grégoire", creation_year: 1997, function: "Mémoire de travail auditivo-verbale", description: "Boucle phonologique" }
 norm2 = { name: "Digit Span - Empan Inversé", creator: "Van Der Linden & Grégoire", creation_year: 1997, function: "Mémoire de travail auditivo-verbale", description: "Administrateur central" }

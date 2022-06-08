@@ -59,3 +59,13 @@
 .back-button {
   margin-bottom: -22px;
 }
+
+.group-name {
+  border: 1px solid grey;
+  background-color: rgba($color: white, $alpha: 0.8);
+  padding: 5px 12px;
+  border-radius: 30px;
+  &:hover {
+    background-color: rgba($color: rgb(238, 238, 238), $alpha: 0.8);
+  }
+}

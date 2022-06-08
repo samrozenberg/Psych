@@ -20,6 +20,7 @@ class PatientsController < ApplicationController
     @doctor = current_doctor
     @patient = Patient.find(params[:id])
     @norms = Norm.all
+    @groups = Group.all
     @evaluation = Evaluation.new
     @evaluations = Evaluation.where(patient: @patient).order(:created_at).reverse
   end

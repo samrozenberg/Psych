@@ -14,8 +14,8 @@
     </div>
     <div class="patient-new-evaluation">
       <h3>Create a new Evaluation</h3>
-        <% @norms.each do |norm| %>
-          <p><%= norm.name %></p>
+        <% @groups.each do |group| %>
+          <div class="group-name"><%= group.name %></div>
         <% end %>
     </div>
   </div>

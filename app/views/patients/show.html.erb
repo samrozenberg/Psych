@@ -77,8 +77,21 @@
                   <%= simple_form_for [@patient, @evaluation] do |f| %>
                     <%= f.hidden_field :doctor_id, :value => @doctor.id %>
                     <%= f.hidden_field :patient_id, :value => @patient.id %>
-                    <%= f.input :norm_id, collection: group.norms, as: :radio_buttons %>
-                    <%= f.input :score %>
+                    <%= f.input :norm_id, collection: group.norms, as: :radio_buttons, label: "Sélectionnez un test..." %>
+                    <div class="d-flex mb-3">
+                    <%= f.input :score, label: "Score:" %>
+                    <% if group.name == "Digit Span" %>
+                      <span class="mesure-span">chiffres</span>
+                    <% elsif group.name == "Figure de Rey" %>
+                      <span class="mesure-span">/36</span>
+                    <% elsif group.name == "Trail Making Test" %>
+                      <span class="mesure-span">secondes</span>
+                    <% elsif group.name == "Test de Stroop" %>
+                      <span class="mesure-span">secondes</span>
+                    <% elsif group.name == "Grober & Buschke (16 mots)" %>
+                      <span class="mesure-span">mots</span>
+                    <% end %>
+                    </div>
                     <%= f.submit "Evaluate", class: "evaluation-button" %>
                   <% end %>
                 </div>

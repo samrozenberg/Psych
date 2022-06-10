@@ -77,7 +77,7 @@
                   <%= simple_form_for [@patient, @evaluation] do |f| %>
                     <%= f.hidden_field :doctor_id, :value => @doctor.id %>
                     <%= f.hidden_field :patient_id, :value => @patient.id %>
-                    <%= f.input :norm_id, as: :check_boxes, collection: group.norms %>
+                    <%= f.input :norm_id, collection: group.norms, as: :radio_buttons %>
                     <%= f.input :score %>
                     <%= f.submit "Evaluate", class: "evaluation-button" %>
                   <% end %>

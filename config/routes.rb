@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :patients do
     resources :evaluations, only: [:create, :update]
+    resources :reports, only: [:create, :update, :index, :show]
   end
   resources :norms, only: [:index]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -22,6 +22,7 @@ class PatientsController < ApplicationController
     @norms = Norm.all
     @groups = Group.all
     @evaluation = Evaluation.new
+    @report = Report.new
     @evaluations = Evaluation.where(patient: @patient).order(:created_at).reverse
   end
 

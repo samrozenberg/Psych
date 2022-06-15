@@ -10,7 +10,12 @@
 
   <div class="patient-content-wrapper d-flex justify-content-between">
     <div class="patient-reports">
-      <p>Find here all the patient's reports.</p>
+      <h3>Generate a new report</h3>
+      <%= simple_form_for [@patient, @report] do |f| %>
+        <%= f.hidden_field :doctor_id, :value => @doctor.id %>
+        <%= f.hidden_field :patient_id, :value => @patient.id %>
+        <%= f.submit "Generate Report", class: "evaluation-button" %>
+      <% end %>
     </div>
     <div class="patient-new-evaluation">
       <h3>Create a new Evaluation</h3>

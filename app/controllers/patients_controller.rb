@@ -19,14 +19,8 @@ class PatientsController < ApplicationController
   def show
     @doctor = current_doctor
     @patient = Patient.find(params[:id])
-    @norms = []
-    Norm.all.each do |norm|
-      @norm_array = []
-      # @norm_array << "#{norm.name} (#{norm.description})" ==> norm.details si différentes normes pour même test
-      @norm_array << norm.name
-      @norm_array << norm.id
-      @norms << @norm_array
-    end
+    @norms = Norm.all
+    @groups = Group.all
     @evaluation = Evaluation.new
     @evaluations = Evaluation.where(patient: @patient).order(:created_at).reverse
   end

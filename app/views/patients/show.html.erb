@@ -14,13 +14,11 @@
     </div>
     <div class="patient-new-evaluation">
       <h3>Create a new Evaluation</h3>
-      <%= simple_form_for [@patient, @evaluation] do |f| %>
-        <%= f.hidden_field :doctor_id, :value => @doctor.id %>
-        <%= f.hidden_field :patient_id, :value => @patient.id %>
-        <%= f.input :norm_id, collection: @norms %>
-        <%= f.input :score %>
-        <%= f.submit "Evaluate", class: "evaluation-button" %>
-      <% end %>
+        <div class="groups">
+        <% @groups.each do |group| %>
+          <button class="group-name" data-bs-toggle="modal" data-bs-target="#<%=group.name.gsub(/[\s+)(&]/,"")%>Modal"><%= group.name %></button>
+        <% end %>
+        </div>
     </div>
   </div>
   <div class="patient-evaluations">
@@ -55,3 +53,53 @@
     </table>
   </div>
 </div>
+
+
+
+
+<%# MODAL MODAL MODAL MODAL MODAL %>
+  <% @groups.each do |group| %>
+    <div class="modal fade" id="<%=group.name.gsub(/[\s+)(&]/,"")%>Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header d-flex justify-content-between">
+            <img src="https://www.kindpng.com/picc/m/0-4052_clinical-psychology-png-transparent-png.png" class="modal-image" />
+            <div class="d-flex align-items-center ms-2">
+              <h5 class="modal-title" id="exampleModalLabel">Evaluation</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="signup-form">
+                  <h2 class="mb-4"><%= group.name %></h2>
+                  <%= simple_form_for [@patient, @evaluation] do |f| %>
+                    <%= f.hidden_field :doctor_id, :value => @doctor.id %>
+                    <%= f.hidden_field :patient_id, :value => @patient.id %>
+                    <%= f.input :norm_id, collection: group.norms, as: :radio_buttons, label: "Sélectionnez un test..." %>
+                    <div class="d-flex mb-3">
+                    <%= f.input :score, label: "Score:" %>
+                    <% if group.name == "Digit Span" %>
+                      <span class="mesure-span">chiffres</span>
+                    <% elsif group.name == "Figure de Rey" %>
+                      <span class="mesure-span">/36</span>
+                    <% elsif group.name == "Trail Making Test" %>
+                      <span class="mesure-span">secondes</span>
+                    <% elsif group.name == "Test de Stroop" %>
+                      <span class="mesure-span">secondes</span>
+                    <% elsif group.name == "Grober & Buschke (16 mots)" %>
+                      <span class="mesure-span">mots</span>
+                    <% end %>
+                    </div>
+                    <%= f.submit "Evaluate", class: "evaluation-button" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<%# <% MODAL END %>

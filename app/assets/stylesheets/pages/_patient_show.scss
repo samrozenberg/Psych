@@ -92,3 +92,32 @@
 .mesure-span {
   padding-top: 0.4rem;
 }
+
+.form-check-input {
+  display: none
+}
+
+// .form-check-label:checked {
+//   background-color: #0D6EFD;
+//   border-color: #0D6EFD;
+// }
+
+.form-check-label {
+  display: inline-block;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 16px;
+  padding: 6px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.form-check-input[type="radio"]:checked+label {
+  background-color: rgb(144, 200, 255);
+}
+
+.form-check {
+  padding-left: 0;
+  text-align: center;
+}

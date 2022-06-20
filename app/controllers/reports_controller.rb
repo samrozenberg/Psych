@@ -5,4 +5,8 @@ class ReportsController < ApplicationController
     Report.create(doctor: @doctor, patient: @patient)
     redirect_to patient_path(@patient)
   end
+
+  def report_params
+    params.require(:report).permit(:patient_id, :doctor_id)
+  end
 end

@@ -16,6 +16,7 @@
       <%= simple_form_for [@patient, @report] do |f| %>
         <%= f.hidden_field :doctor_id, :value => @doctor.id %>
         <%= f.hidden_field :patient_id, :value => @patient.id %>
+        <%= f.input :thing, as: :fake_select, collection: [1, 2, 3] %>
         <%= f.submit "Generate Report", class: "evaluation-button" %>
       <% end %>
     </div>

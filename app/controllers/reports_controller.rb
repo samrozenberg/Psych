@@ -1,5 +1,6 @@
 class ReportsController < ApplicationController
   def create
+    raise
     @patient = Patient.find(params[:patient_id])
     @doctor = current_doctor
     Report.create(doctor: @doctor, patient: @patient)

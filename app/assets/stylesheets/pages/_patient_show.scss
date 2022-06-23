@@ -93,7 +93,7 @@
   padding-top: 0.4rem;
 }
 
-.form-check-input {
+.new_evaluation .form-check-input {
   display: none
 }
 
@@ -102,7 +102,7 @@
 //   border-color: #0D6EFD;
 // }
 
-.form-check-label {
+.new_evaluation .form-check-label {
   display: inline-block;
   background-color: white;
   border: 1px solid grey;
@@ -116,11 +116,11 @@
   }
 }
 
-.form-check-input[type="radio"]:checked+label {
+.new_evaluation .form-check-input[type="radio"]:checked+label {
   background-color: rgb(144, 200, 255);
 }
 
-.form-check {
+.new_evaluation .form-check {
   padding-left: 0;
   text-align: center;
 }

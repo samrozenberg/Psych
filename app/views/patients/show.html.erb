@@ -9,6 +9,7 @@
   </div>
 
         <%# <%= f.input :patient_id, as: :check_boxes, collection: [[1], [2], [3]] %>
+        <%# <%= f.input :thing, as: :fake_select, collection: [1, 2, 3] %>
 
   <div class="patient-content-wrapper d-flex justify-content-between">
     <div class="patient-reports">
@@ -16,7 +17,11 @@
       <%= simple_form_for [@patient, @report] do |f| %>
         <%= f.hidden_field :doctor_id, :value => @doctor.id %>
         <%= f.hidden_field :patient_id, :value => @patient.id %>
-        <%= f.input :thing, as: :fake_select, collection: [1, 2, 3] %>
+        <% number = 1 %>
+        <% @dates.each do |date| %>
+          <%= f.input :"date#{number}", as: :fake_checkbox, wrapper: :vertical_boolean, label: "#{date}" %>
+          <% number += 1 %>
+        <% end %>
         <%= f.submit "Generate Report", class: "evaluation-button" %>
       <% end %>
     </div>

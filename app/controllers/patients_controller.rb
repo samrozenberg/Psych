@@ -24,6 +24,12 @@ class PatientsController < ApplicationController
     @evaluation = Evaluation.new
     @report = Report.new
     @evaluations = Evaluation.where(patient: @patient).order(:created_at).reverse
+    @dates = []
+    @evaluations.each do |evaluation|
+      unless @dates.include?(evaluation.created_at.strftime("%e %^b %Y"))
+        @dates << evaluation.created_at.strftime("%e %^b %Y")
+      end
+    end
   end
 
   private

@@ -124,3 +124,19 @@
   padding-left: 0;
   text-align: center;
 }
+
+.all-dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px;
+}
+
+.date-question {
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 1.12rem;
+}
+
+.evaluation-button-wrapper {
+  text-align: center;
+}

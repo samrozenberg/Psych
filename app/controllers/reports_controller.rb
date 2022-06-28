@@ -31,6 +31,11 @@ class ReportsController < ApplicationController
     redirect_to patient_path(@patient)
   end
 
+  def show
+    @report = Report.find(params[:id])
+    @patient = Patient.find(params[:patient_id])
+  end
+
   def report_params
     params.require(:report).permit(:patient_id, :doctor_id, :date1, :date2, :date3, :date4, :date5, :date6, :date7, :date8, :date9, :date10, :date11, :date12, :date13, :date14, :date15, :date16, :date17, :date18, :date19, :date20, :date21, :date22 )
   end

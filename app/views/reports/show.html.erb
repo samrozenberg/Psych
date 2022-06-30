@@ -1,1 +1,9 @@
-<h1><%= @patient.first_name %> <%= @patient.last_name %></h1>
+<div class="container report-container">
+  <h1 class="report-title"><%= @patient.first_name %> <%= @patient.last_name %> : Report (<%= @report.created_at.strftime("%e %^b %Y") %>)</h1>
+
+  <div class="report-wrapper">
+    <% @report.evaluations.each do |evaluation| %>
+      <div><%= evaluation.norm.name %></div>
+    <% end %>
+  </div>
+</div>

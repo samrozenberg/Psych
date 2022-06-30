@@ -14,7 +14,7 @@
       <h3>Reports</h3>
       <button class="group-name" data-bs-toggle="modal" data-bs-target="#reportModal">Create a new Report</button><br>
       <% @reports.each do |report| %>
-        <%= link_to patient_report_path(@patient, report) do %>
+        <%= link_to patient_report_path(@patient, report), target: "_blank" do %>
           <p>report_<%= @reports.find_index(report) + 1 %>.pdf</p>
         <% end %>
       <% end %>

@@ -5,3 +5,20 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
+.report-title {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.report-wrapper {
+  background-color: white;
+  width: 90%;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 20px 20px;
+}

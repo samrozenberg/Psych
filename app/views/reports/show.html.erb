@@ -2,7 +2,9 @@
   <h1 class="report-title"><%= @patient.first_name %> <%= @patient.last_name %> : Report (<%= @report.created_at.strftime("%e %^b %Y") %>)</h1>
 
   <!-- Target -->
-    <textarea id="bar">Mussum ipsum cacilds...</textarea>
+    <% @interpolation = "#{@patient.first_name}\n\n#{@patient.last_name}" %>
+
+    <textarea id="bar"><%= @interpolation %> Mussum ipsum cacilds...</textarea>
 
     <!-- Trigger -->
     <button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#bar">

@@ -2,7 +2,7 @@
   <h1 class="report-title"><%= @patient.first_name %> <%= @patient.last_name %> : Report (<%= @report.created_at.strftime("%e %^b %Y") %>)</h1>
 
   <!-- Target -->
-    <% @interpolation = "#{@patient.first_name}\n\n#{@patient.last_name}" %>
+    <% @interpolation = "#{@patient.first_name}\n#{@patient.last_name}" %>
 
     <textarea id="bar"><%= @interpolation %> Mussum ipsum cacilds...</textarea>
 

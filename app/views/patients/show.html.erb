@@ -8,9 +8,16 @@
     <h5><%= @patient.age %> years old</h5>
   </div>
 
+
   <div class="patient-content-wrapper d-flex justify-content-between">
     <div class="patient-reports">
-      <p>Find here all the patient's reports.</p>
+      <h3>Reports</h3>
+      <button class="group-name" data-bs-toggle="modal" data-bs-target="#reportModal">Create a new Report</button><br>
+      <% @reports.each do |report| %>
+        <%= link_to patient_report_path(@patient, report), target: "_blank" do %>
+          <p>report_<%= @reports.find_index(report) + 1 %>.pdf</p>
+        <% end %>
+      <% end %>
     </div>
     <div class="patient-new-evaluation">
       <h3>Create a new Evaluation</h3>
@@ -57,7 +64,7 @@
 
 
 
-<%# MODAL MODAL MODAL MODAL MODAL %>
+<%# MODAL EVALUATION %>
   <% @groups.each do |group| %>
     <div class="modal fade" id="<%=group.name.gsub(/[\s+)(&]/,"")%>Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -92,7 +99,9 @@
                       <span class="mesure-span">mots</span>
                     <% end %>
                     </div>
-                    <%= f.submit "Evaluate", class: "evaluation-button" %>
+                    <div class="evaluation-button-wrapper">
+                      <%= f.submit "Evaluate", class: "evaluation-button" %>
+                    </div>
                   <% end %>
                 </div>
               </div>
@@ -102,4 +111,45 @@
       </div>
     </div>
   <% end %>
+<%# <% MODAL END %>
+
+<%# MODAL REPORT %>
+  <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between">
+          <img src="https://www.kindpng.com/picc/m/0-4052_clinical-psychology-png-transparent-png.png" class="modal-image" />
+          <div class="d-flex align-items-center ms-2">
+            <h5 class="modal-title" id="exampleModalLabel">Evaluation</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="signup-form">
+                <h2 class="mb-4">Create a Report</h2>
+                <%= simple_form_for [@patient, @report] do |f| %>
+                  <p class="date-question">"What are the dates of the report's evaluations ?"</p>
+                  <%= f.hidden_field :doctor_id, :value => @doctor.id %>
+                  <%= f.hidden_field :patient_id, :value => @patient.id %>
+                  <% number = 1 %>
+                  <div class = "all-dates">
+                    <% @dates.each do |date| %>
+                      <%= f.input :"date#{number}", as: :fake_checkbox, wrapper: :vertical_boolean, label: "#{date}" %>
+                      <% number += 1 %>
+                    <% end %>
+                  </div>
+                  <div class="evaluation-button-wrapper">
+                    <%= f.submit "Generate Report", class: "evaluation-button" %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <%# <% MODAL END %>

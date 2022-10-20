@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_08_103608) do
+ActiveRecord::Schema.define(version: 2022_06_15_103312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,24 @@ ActiveRecord::Schema.define(version: 2022_06_08_103608) do
     t.index ["norm_id"], name: "index_records_on_norm_id"
   end
 
+  create_table "report_evaluations", force: :cascade do |t|
+    t.bigint "report_id", null: false
+    t.bigint "evaluation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["evaluation_id"], name: "index_report_evaluations_on_evaluation_id"
+    t.index ["report_id"], name: "index_report_evaluations_on_report_id"
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.bigint "doctor_id", null: false
+    t.bigint "patient_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["doctor_id"], name: "index_reports_on_doctor_id"
+    t.index ["patient_id"], name: "index_reports_on_patient_id"
+  end
+
   create_table "results", force: :cascade do |t|
     t.bigint "evaluation_id", null: false
     t.float "outcome"
@@ -106,5 +124,9 @@ ActiveRecord::Schema.define(version: 2022_06_08_103608) do
   add_foreign_key "evaluations", "norms"
   add_foreign_key "evaluations", "patients"
   add_foreign_key "records", "norms"
+  add_foreign_key "report_evaluations", "evaluations"
+  add_foreign_key "report_evaluations", "reports"
+  add_foreign_key "reports", "doctors"
+  add_foreign_key "reports", "patients"
   add_foreign_key "results", "evaluations"
 end

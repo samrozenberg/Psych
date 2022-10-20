@@ -93,7 +93,7 @@
   padding-top: 0.4rem;
 }
 
-.form-check-input {
+.new_evaluation .form-check-input {
   display: none
 }
 
@@ -102,7 +102,7 @@
 //   border-color: #0D6EFD;
 // }
 
-.form-check-label {
+.new_evaluation .form-check-label {
   display: inline-block;
   background-color: white;
   border: 1px solid grey;
@@ -111,13 +111,32 @@
   font-size: 16px;
   cursor: pointer;
   margin: 2px;
+  &:hover {
+    background-color: rgba($color: rgb(238, 238, 238), $alpha: 0.8);
+  }
 }
 
-.form-check-input[type="radio"]:checked+label {
+.new_evaluation .form-check-input[type="radio"]:checked+label {
   background-color: rgb(144, 200, 255);
 }
 
-.form-check {
+.new_evaluation .form-check {
   padding-left: 0;
+  text-align: center;
+}
+
+.all-dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px;
+}
+
+.date-question {
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 1.12rem;
+}
+
+.evaluation-button-wrapper {
   text-align: center;
 }

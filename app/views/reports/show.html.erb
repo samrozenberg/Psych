@@ -1,15 +1,19 @@
 <div class="container report-container">
   <h1 class="report-title"><%= @patient.first_name %> <%= @patient.last_name %> : Report (<%= @report.created_at.strftime("%e %^b %Y") %>)</h1>
 
-  <!-- Target -->
+
     <% @interpolation = "#{@patient.first_name}\n#{@patient.last_name}" %>
 
     <textarea id="bar"><%= @interpolation %> Mussum ipsum cacilds...</textarea>
 
-    <!-- Trigger -->
-    <button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#bar">
+    <button class="clipboard-btn" id="copy-button" data-clipboard-action="copy" data-clipboard-target="#bar">
       Copy to clipboard
     </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.btn');
+    </script>
 
   <div class="report-wrapper">
     <% @report.evaluations.each do |evaluation| %>

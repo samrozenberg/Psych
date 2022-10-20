@@ -2,7 +2,9 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+
 //= require clipboard
+
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
@@ -17,11 +19,25 @@ ActiveStorage.start()
 import "controllers"
 import "bootstrap"
 
-global.$ = require('jquery')
 
-$(document).ready(function () {
 
-  var clipboard = new Clipboard('.clipboard-btn');
+
+
+const copybutton = document.getElementById("copy-button");
+
+copybutton.addEventListener("click", (event) => {
+  var clipboard = new ClipboardJS('.clipboard-btn');
   console.log(clipboard);
-
 });
+
+// document.addEventListener('turbo:load', (event) => {
+//   new ClipboardJS('.js-clipboard', {
+//     text: function (trigger) {
+//       return trigger.getAttribute('data-clipboard-text')
+//     }
+//   })
+// })
+
+// element.addEventListener("click", function () {
+//   document.getElementById("demo").innerHTML = "Hello World";
+// });

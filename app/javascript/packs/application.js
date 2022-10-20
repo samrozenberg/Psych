@@ -28,6 +28,10 @@ const copybutton = document.getElementById("copy-button");
 copybutton.addEventListener("click", (event) => {
   var clipboard = new ClipboardJS('.clipboard-btn');
   console.log(clipboard);
+  $("body").append('<div id="copied-flash" style="z-index: 100; position: fixed; top: 0px; margin: 0 auto; left: 0; right: 0; width: 200px; padding: 20px; background: #EEEEEE;">Copied</div>');
+  setTimeout(function () {
+    $('#copied-flash').fadeOut("slow", function () { $(this).remove(); });
+  }, 2000);
 });
 
 // document.addEventListener('turbo:load', (event) => {

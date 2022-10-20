@@ -3,8 +3,9 @@
 
 
     <% @interpolation = "#{@patient.first_name}\n#{@patient.last_name}" %>
-
-    <textarea id="bar"><%= @interpolation %> Mussum ipsum cacilds...</textarea>
+    <div class="text-center">
+      <textarea id="bar" class="report-wrapper"><%= @interpolation %> Mussum ipsum cacilds...</textarea>
+    </div>
 
     <button class="clipboard-btn" id="copy-button" data-clipboard-action="copy" data-clipboard-target="#bar">
       Copy to clipboard

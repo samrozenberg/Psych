@@ -1,24 +1,25 @@
 <div class="container report-container">
   <h1 class="report-title"><%= @patient.first_name %> <%= @patient.last_name %> : Report (<%= @report.created_at.strftime("%e %^b %Y") %>)</h1>
 
-
     <% @interpolation = "#{@patient.first_name}\n#{@patient.last_name}" %>
+
+      <div class="clipboard-button-wrapper" style="margin-left:auto;margin-right:auto;">
+        <button>
+          Save
+        </button>
+        <button class="clipboard-btn" id="copy-button" data-clipboard-action="copy" data-clipboard-target="#bar">
+          Copy to clipboard
+        </button>
+      </div>
+
     <div class="text-center">
-      <textarea id="bar" class="report-wrapper"><%= @interpolation %> Mussum ipsum cacilds...</textarea>
+      <textarea id="bar" class="report-wrapper unselectable"><%= @interpolation %> Mussum ipsum cacilds...
+      </textarea>
     </div>
 
-    <button class="clipboard-btn" id="copy-button" data-clipboard-action="copy" data-clipboard-target="#bar">
-      Copy to clipboard
-    </button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
     <script>
       new ClipboardJS('.btn');
     </script>
-
-  <div class="report-wrapper">
-    <% @report.evaluations.each do |evaluation| %>
-      <div><%= evaluation.norm.name %></div>
-    <% end %>
-  </div>
 </div>

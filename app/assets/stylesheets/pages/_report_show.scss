@@ -22,3 +22,16 @@
   border-radius: 5px;
   padding: 20px 20px;
 }
+
+.unselectable::selection {
+  background: transparent;
+}
+
+.clipboard-button-wrapper {
+  width: 90%;
+  text-align: right;
+}
+
+.report-container {
+  text-align: center;
+}
